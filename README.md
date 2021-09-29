@@ -91,4 +91,8 @@ L3MON is built for both Educational and Internal use ONLY.</b>
 
 <br>
 <p align="center">Made with ❤️ By <a href="//d3vl.com">D3VL</a></p>
-<p align="center" style="font-size: 8px">v1.1.2</p>
+<p align="center" style="font-size: 8px">v1.1.3</p>
+
+## Stuff That's Added/Changed
+ - changed: LOG colors/look
+ - added: get all info button on the info tab
