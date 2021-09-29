@@ -95,4 +95,4 @@ L3MON is built for both Educational and Internal use ONLY.</b>
 
 ## Stuff That's Added/Changed
  - changed: LOG colors/look
- - added: get all info button on the info tab
+ - added: "GET ALL INFO" button on the "Info" tab
