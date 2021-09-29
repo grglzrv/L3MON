@@ -15,9 +15,22 @@
         <% include partials/header.ejs %>
         <div class="ui segment">
             <div class="logs">
+                <%
+                    function dateToString(d) {
+                        let getFullYear = d.getFullYear();
+                        let getMonth = d.getMonth();
+                        let getDate = d.getDate();
+                        let getHours = d.getHours();
+                        let getMinutes = d.getMinutes();
+                        let getSeconds = d.getSeconds();
+                        return (getFullYear + '-' + (getMonth<10?'0':'') + getMonth + '-' + (getDate<10?'0':'') + getDate + ' '
+                        + (getHours<10?'0':'') + getHours + ':' + (getMinutes<10?'0':'') + getMinutes + ":" + (getSeconds<10?'0':'') + getSeconds);
+                    }
+                %>
+
                 <% logs.forEach((log) => { %>
                 <div class="logitm <%= log.type %>">
-                    <%= new Date(log.time).toLocaleString('en-GB', { timeZone: 'UTC' }) %> =>
+                    <%= new Date(log.time).toString() %> =>
                     <%= log.type %> | <%= log.message %> </div>
                 <% }) %>
             </div>
