@@ -39,3 +39,13 @@
   color: #f03434;
 }
 /*# sourceMappingURL=custom.css.map */
+
+.bigbutton {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+button {
+  cursor: pointer;
+}
