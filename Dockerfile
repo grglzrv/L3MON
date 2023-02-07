@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV pass=changeme
+ARG PASSWORD
 
 RUN apk add --no-cache --update-cache nodejs npm \
     curl git openjdk8-jre gettext
@@ -11,10 +11,7 @@ WORKDIR L3MON/server
 
 RUN npm run && npm install pm2 -g && npm install
 RUN pm2 start index.js && sleep 5 && pm2 stop index
-RUN export hash="$(echo -n "$pass" | md5sum | awk '{print $1}')" && \
-    sed -i 's|"password": ""|"password": "$hash"|g' maindb.json && \
-    envsubst < maindb.json > maindb.json.1 && \
-    mv maindb.json.1 maindb.json
+RUN sed -i "s/\"password\": \"\"/\"password\": \"$(echo -n "$PASSWORD" | md5sum | awk '{print $1}')\"/g" maindb.json
 
 EXPOSE 22533
 
